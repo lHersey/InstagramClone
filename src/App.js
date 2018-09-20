@@ -1,6 +1,6 @@
 import React from "react";
 import { MainFeed, Login, Camera, Profile } from "./modules/screens";
-import { Icon } from "./components/Icon";
+import { Icon } from "./components/Icons";
 import {
   createSwitchNavigator,
   createBottomTabNavigator
