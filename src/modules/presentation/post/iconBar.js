@@ -1,13 +1,19 @@
 import React from "react";
 import { View, Image, StyleSheet } from "react-native";
+import Icon from "./icon";
 import config from "../../../config";
 
-const iconBar = ({ sourceHeart }) => {
+const iconBar = ({
+  sourceHeart,
+  onHeartPress,
+  onCommentPress,
+  onSendPress
+}) => {
   return (
     <View style={styles.iconBar}>
-      <Image style={styles.icon} source={sourceHeart} />
-      <Image style={styles.icon} source={config.icons.comment} />
-      <Image style={styles.icon} source={config.icons.send} />
+      <Icon source={sourceHeart} onPress={onHeartPress} />
+      <Icon source={config.icons.comment} onPress={onCommentPress} />
+      <Icon source={config.icons.send} onPress={onSendPress} />
     </View>
   );
 };
@@ -17,11 +23,6 @@ const styles = StyleSheet.create({
     height: 50,
     width: "100%",
     flexDirection: "row"
-  },
-  icon: {
-    width: 40,
-    height: 40,
-    margin: 7
   }
 });
 

@@ -7,7 +7,7 @@ const userBar = ({ profilePhoto, name }) => {
     <View style={styles.userBar}>
       <View style={styles.userInfo}>
         <Image
-          resizeMode="contain"
+          resizeMode="cover"
           style={styles.photoProfile}
           source={{ uri: profilePhoto }}
         />
